@@ -97,9 +97,9 @@ nav{
 .cart-wrapper{
   width: 330px;
   height: 250px;
-  position: absolute;
+  position: fixed;
   right: 0;
-  top: 100px;
+  top: 10vh;
   background: white;
  
   padding: 5px;
