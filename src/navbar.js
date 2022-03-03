@@ -61,11 +61,19 @@ function Navbar() {
                 </div>
                     <div className="mobile-menu">
 
-                        <a onClick={() => setMobileMenu(true)}>Menu</a>
+                        <p onClick={() => setMobileMenu(true)}>Menu</p>
                     </div>
               
                 <div className={`${showCart  ? 'cart-wrapper' : 'cart-no-wrapper'}`}>
+            <div className="cart-header">
             <h2>Cart</h2>
+                <div className="cart-close-icon"  onClick={() => setShowCart(false)}>
+                <svg width="14" height="15" viewBox='0 0 14 15' xmlns="http://www.w3.org/2000/svg">
+            <path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" 
+            fill="#fff" fill-rule="evenodd" 
+           /></svg>
+                </div>
+            </div>
             <span></span>
         {   cartCounter > 0 ?
             products.map((item)=>{
@@ -106,10 +114,12 @@ transition={{duration:0.7}}
         <li>About</li>
         
         <li>Contact</li>
-        <a  onClick={() => setMobileMenu((state) => !state) }>Close</a>
+        <p  onClick={() => setMobileMenu((state) => !state) }>Close</p>
 
 
     </ul>
+
+
     
 </motion.div>
            
